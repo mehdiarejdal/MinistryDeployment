@@ -1,0 +1,46 @@
+/* Dews.css */
+.Dews {
+  text-align: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-icons img {
+  margin-right: 10px;
+}
+
+.right-buttons button {
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blue-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.content {
+  margin-top: 100px; /* Adjust according to your navbar height */
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}

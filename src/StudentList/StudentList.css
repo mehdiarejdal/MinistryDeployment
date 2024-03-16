@@ -1,0 +1,47 @@
+/* StudentList.css */
+
+/* Add styles for loading indicator */
+.loading {
+    margin-top: 20px;
+  }
+  
+  /* Add styles for table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Add styles for checkbox */
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  /* Add hover effect for table row */
+  .table-row:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style predict button */
+  .predict-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Predictions</title>
+</head>
+<body>
+    <h1>Student Predictions</h1>
+    <ul id="student-list"></ul>
+
+    <script>
+        // Function to fetch student data
+        async function fetchStudents() {
+            const response = await fetch("/students");
+            const data = await response.json();
+            return data;
+        }
+
+        // Function to fetch prediction for a student
+        async function fetchPrediction(studentId) {
+            const response = await fetch("/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ student_id: studentId })
+            });
+            const data = await response.json();
+            return data;
+        }
+
+        // Function to render student list and predictions
+        async function renderStudents() {
+            const students = await fetchStudents();
+            const studentList = document.getElementById("student-list");
+            studentList.innerHTML = ""; // Clear previous content
+            students.forEach(async student => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Student ID: ${student.student_id}`;
+                const predictionButton = document.createElement("button");
+                predictionButton.textContent = "Get Prediction";
+                predictionButton.addEventListener("click", async () => {
+                    const prediction = await fetchPrediction(student.student_id);
+                    alert(`Prediction for ${prediction.student_id}: ${prediction.prediction}`);
+                });
+                listItem.appendChild(predictionButton);
+                studentList.appendChild(listItem);
+            });
+        }
+
+        // Initial rendering
+        renderStudents();
+    </script>
+</body>
+</html>
