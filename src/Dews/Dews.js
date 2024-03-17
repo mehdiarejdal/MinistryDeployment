@@ -7,6 +7,7 @@ import yourImage from './image1.png'
 import yourIcon1 from './Financial Growth Analysis.png'
 import yourIcon2 from './Financial Analytics.png'
 import yourIcon3 from './High Risk.png'
+import image3 from './image 3.png'
 
 function Dews() {
   return (
@@ -52,7 +53,16 @@ with insights for early intervention and personalized support we ensure accurate
     <p>Identifying at-risk students involves using various assessment tools and collaborating with educators and parents to understand factors affecting their academic performance. Data-driven analysis helps pinpoint patterns contributing to their challenges, enabling tailored interventions.</p>
   </div>
 </div>
-
+<div className="context">
+        <div className="left-section">
+          <h1>AI for Education</h1>
+          <p>Elevate your educational strategies with personalized advisory services. Our team of data scientists works alongside you, turning complex data into clear, actionable insights for improved student outcomes.</p>
+          <button className="blue-button">Track Student</button>
+        </div>
+        <div className="right-section">
+           <img src={image3} alt="image3" />
+        </div>
+      </div>
     </div>
   );
 }
