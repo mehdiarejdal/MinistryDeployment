@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dews from './Dews';
-import StudentList1 from './StudentList1';
+import Dews from './Dews/Dews';
+import StudentList1 from './StudentList/StudentList1';
 
 function App() {
   return (
